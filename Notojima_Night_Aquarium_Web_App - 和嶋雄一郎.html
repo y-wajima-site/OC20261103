@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>のとじま水族館 - NIGHT AQUARIUM SPECIAL</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #0b132b;
+            color: #e0f2fe;
+        }
+        .font-rounded {
+            font-family: 'M PLUS Rounded 1c', sans-serif;
+        }
+        /* 夜間水族館風の幻想的なグラデーション背景 */
+        .bg-night-gradient {
+            background: linear-gradient(135deg, #0b132b 0%, #1c2541 50%, #3a506b 100%);
+        }
+        .glow-text {
+            text-shadow: 0 0 12px rgba(56, 189, 248, 0.6);
+        }
+        .glow-box {
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.25);
+        }
+        /* アニメーション：ゆらゆら揺れる波のような動き */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+        }
+        .animate-float {
+            animation: float 4s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-night-gradient text-slate-100 pb-20">
+
+    <!-- ヘッダーエリア -->
+    <header class="relative overflow-hidden bg-slate-900/80 backdrop-blur-md border-b border-cyan-500/30 sticky top-0 z-50">
+        <div class="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <span class="text-3xl animate-float">🌙</span>
+                <div>
+                    <span class="text-xs font-semibold uppercase tracking-widest text-cyan-400">Night Aquarium Guide</span>
+                    <h1 class="text-xl md:text-2xl font-extrabold font-rounded glow-text text-white">のとじま水族館 <span class="text-cyan-300 text-lg">ナイトファンタジー</span></h1>
+                </div>
+            </div>
+            <!-- モード切り替えボタン風インジケーター -->
+            <div class="bg-cyan-950/80 border border-cyan-500/40 rounded-full px-3 py-1 flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
+                <span class="text-xs text-cyan-200 font-medium">夜間営業中</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 pt-6 space-y-8">
+
+        <!-- メインビジュアル：友達と楽しむ夜限定イベント案内 -->
+        <section class="relative rounded-3xl overflow-hidden border border-cyan-500/30 glow-box bg-slate-900/60 p-6 md:p-8 text-center">
+            <div class="absolute -top-10 -right-10 w-40 h-40 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-blue-500/10 rounded-full blur-3xl pointer-events-none"></div>
+            
+            <span class="inline-block bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs font-bold px-4 py-1.5 rounded-full mb-3 shadow-md">
+                ✨ 友達同士で最高の一夜を！
+            </span>
+            <h2 class="text-2xl md:text-4xl font-extrabold font-rounded text-white mb-3 leading-tight">
+                月夜と海が織りなす<br class="sm:hidden"><span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-sky-200 to-indigo-300">幻想的な限定イベント</span>
+            </h2>
+            <p class="text-sm md:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed mb-6">
+                昼間とはまったく違う静けさと神秘に包まれた「のとじま水族館」。青く光るプロジェクションマッピングや夜間限定ナイトショーで、かけがえのない思い出を作ろう！
+            </p>
+
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
+                <div class="bg-slate-800/80 border border-slate-700/60 rounded-2xl p-3">
+                    <div class="text-cyan-400 text-xl mb-1"><i class="fa-solid font-bold fa-clock"></i></div>
+                    <div class="text-xs text-slate-400">開催時間</div>
+                    <div class="text-sm font-bold text-white">18:00 - 21:00</div>
+                </div>
+                <div class="bg-slate-800/80 border border-slate-700/60 rounded-2xl p-3">
+                    <div class="text-cyan-400 text-xl mb-1"><i class="fa-solid fa-ticket"></i></div>
+                    <div class="text-xs text-slate-400">夜間特別チケット</div>
+                    <div class="text-sm font-bold text-white">ペア・グループ割有</div>
+                </div>
+                <div class="bg-slate-800/80 border border-slate-700/60 rounded-2xl p-3">
+                    <div class="text-cyan-400 text-xl mb-1"><i class="fa-solid fa-camera"></i></div>
+                    <div class="text-xs text-slate-400">映えスポット</div>
+                    <div class="text-sm font-bold text-white">全5箇所設置</div>
+                </div>
+                <div class="bg-slate-800/80 border border-slate-700/60 rounded-2xl p-3">
+                    <div class="text-cyan-400 text-xl mb-1"><i class="fa-solid fa-users"></i></div>
+                    <div class="text-xs text-slate-400">おすすめ</div>
+                    <div class="text-sm font-bold text-white">友達・グループ</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- タブナビゲーション -->
+        <section>
+            <div class="flex border-b border-slate-700/80 mb-6">
+                <button onclick="switchTab('highlights')" id="tab-highlights" class="flex-1 py-3 px-4 text-center text-sm font-bold border-b-2 border-cyan-400 text-cyan-300 transition-colors">
+                    <i class="fa-solid fa-star mr-1.5"></i>夜のハイライト
+                </button>
+                <button onclick="switchTab('schedule')" id="tab-schedule" class="flex-1 py-3 px-4 text-center text-sm font-bold border-b-2 border-transparent text-slate-400 hover:text-slate-200 transition-colors">
+                    <i class="fa-solid fa-calendar-day mr-1.5"></i>タイムスケジュール
+                </button>
+                <button onclick="switchTab('rally')" id="tab-rally" class="flex-1 py-3 px-4 text-center text-sm font-bold border-b-2 border-transparent text-slate-400 hover:text-slate-200 transition-colors">
+                    <i class="fa-solid fa-map-location-dot mr-1.5"></i>思い出スタンプ
+                </button>
+            </div>
+
+            <!-- TAB 1: 夜のハイライトスポット -->
+            <div id="content-highlights" class="space-y-4">
+                <h3 class="text-lg font-bold text-white flex items-center gap-2 mb-2">
+                    <span class="w-2 h-5 bg-cyan-400 rounded-full"></span>
+                    友達と一緒に撮りたい！夜限定フォトエリア
+                </h3>
+
+                <div class="grid md:grid-cols-2 gap-4">
+                    <!-- カード 1 -->
+                    <div class="bg-slate-900/70 border border-slate-800 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition duration-300">
+                        <div class="h-44 bg-slate-800 relative flex items-center justify-center overflow-hidden">
+                            <!-- プレースホルダー画像（水族館大水槽風イメージ） -->
+                            <img src="https://placehold.co/600x400/0f172a/38bdf8?text=Jinbei+Shark+Night+Projection" alt="ジンベエザメ館" class="w-full h-full object-cover">
+                            <span class="absolute top-3 left-3 bg-black/60 backdrop-blur-sm text-cyan-300 text-xs px-2.5 py-1 rounded-full border border-cyan-500/30">
+                                🌌 ジンベエザメ館 青の回廊
+                            </span>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-bold text-white text-base mb-1">巨大水槽×ディープブルーライティング</h4>
+                            <p class="text-xs text-slate-300 leading-relaxed mb-3">
+                                泳ぐジンベエザメとともに、壁面全体に幻想的な波模様の光が広がります。シルエット写真を撮るのに絶好のスポット！
+                            </p>
+                            <div class="flex items-center justify-between text-xs text-cyan-400">
+                                <span><i class="fa-regular fa-clock mr-1"></i>常時点灯</span>
+                                <button onclick="likeSpot('spot1')" class="hover:text-cyan-200 bg-slate-800 px-3 py-1 rounded-full">
+                                    ❤️ <span id="like1">48</span> Like
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- カード 2 -->
+                    <div class="bg-slate-900/70 border border-slate-800 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition duration-300">
+                        <div class="h-44 bg-slate-800 relative flex items-center justify-center overflow-hidden">
+                            <img src="https://placehold.co/600x400/1e1b4b/a855f7?text=Jellyfish+Luminous+Zone" alt="クラゲ展示" class="w-full h-full object-cover">
+                            <span class="absolute top-3 left-3 bg-black/60 backdrop-blur-sm text-purple-300 text-xs px-2.5 py-1 rounded-full border border-purple-500/30">
+                                🪼 クラゲの光回廊
+                            </span>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-bold text-white text-base mb-1">フルカラーLEDリフレクション</h4>
+                            <p class="text-xs text-slate-300 leading-relaxed mb-3">
+                                音楽に合わせて色が移り変わるクラゲ水槽。鏡を使った演出で、まるで星空の中に浮いているような感覚に。
+                            </p>
+                            <div class="flex items-center justify-between text-xs text-purple-400">
+                                <span><i class="fa-regular fa-clock mr-1"></i>常時演出</span>
+                                <button onclick="likeSpot('spot2')" class="hover:text-purple-200 bg-slate-800 px-3 py-1 rounded-full">
+                                    ❤️ <span id="like2">62</span> Like
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- カード 3 -->
+                    <div class="bg-slate-900/70 border border-slate-800 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition duration-300">
+                        <div class="h-44 bg-slate-800 relative flex items-center justify-center overflow-hidden">
+                            <img src="https://placehold.co/600x400/0369a1/7dd3fc?text=Night+Dolphin+Pool" alt="イルカプール" class="w-full h-full object-cover">
+                            <span class="absolute top-3 left-3 bg-black/60 backdrop-blur-sm text-sky-300 text-xs px-2.5 py-1 rounded-full border border-sky-500/30">
+                                🐬 ナイトイルカスタジアム
+                            </span>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-bold text-white text-base mb-1">月灯りのナイトイルカショー</h4>
+                            <p class="text-xs text-slate-300 leading-relaxed mb-3">
+                                水しぶきと光の演出がコラボレーションする特別公演。夜風を感じながら、友達と感動をシェアしよう！
+                            </p>
+                            <div class="flex items-center justify-between text-xs text-sky-400">
+                                <span><i class="fa-regular fa-clock mr-1"></i>19:30 / 20:30 (全2回)</span>
+                                <button onclick="likeSpot('spot3')" class="hover:text-sky-200 bg-slate-800 px-3 py-1 rounded-full">
+                                    ❤️ <span id="like3">95</span> Like
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- カード 4 -->
+                    <div class="bg-slate-900/70 border border-slate-800 rounded-2xl overflow-hidden hover:border-cyan-500/50 transition duration-300">
+                        <div class="h-44 bg-slate-800 relative flex items-center justify-center overflow-hidden">
+                            <img src="https://placehold.co/600x400/14532d/4ade80?text=Outdoor+Illumination+Garden" alt="屋外ガーデン" class="w-full h-full object-cover">
+                            <span class="absolute top-3 left-3 bg-black/60 backdrop-blur-sm text-emerald-300 text-xs px-2.5 py-1 rounded-full border border-emerald-500/30">
+                                🌴 海辺のナイトテラス
+                            </span>
+                        </div>
+                        <div class="p-4">
+                            <h4 class="font-bold text-white text-base mb-1">波音と光のチルアウトスペース</h4>
+                            <p class="text-xs text-slate-300 leading-relaxed mb-3">
+                                七尾湾を一望できるテラス席で、夜間限定のホットドリンクやテイクアウトスイーツを楽しもう。
+                            </p>
+                            <div class="flex items-center justify-between text-xs text-emerald-400">
+                                <span><i class="fa-regular fa-clock mr-1"></i>フードL.O. 20:30</span>
+                                <button onclick="likeSpot('spot4')" class="hover:text-emerald-200 bg-slate-800 px-3 py-1 rounded-full">
+                                    ❤️ <span id="like4">39</span> Like
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 2: タイムスケジュール -->
+            <div id="content-schedule" class="space-y-4 hidden">
+                <h3 class="text-lg font-bold text-white flex items-center gap-2 mb-2">
+                    <span class="w-2 h-5 bg-cyan-400 rounded-full"></span>
+                    夜間限定プログラム・スケジュール
+                </h3>
+                <div class="bg-slate-900/70 border border-slate-800 rounded-2xl p-4 space-y-4">
+                    <!-- イベント1 -->
+                    <div class="flex items-start gap-4 pb-4 border-b border-slate-800">
+                        <div class="bg-cyan-950 border border-cyan-500/40 text-cyan-300 font-bold px-3 py-2 rounded-xl text-center min-w-[80px]">
+                            <div class="text-xs">開演</div>
+                            <div class="text-lg">18:30</div>
+                        </div>
+                        <div>
+                            <span class="bg-indigo-900/80 text-indigo-300 text-xs px-2 py-0.5 rounded font-medium">トンネル水槽</span>
+                            <h4 class="font-bold text-white mt-1">夜の魚たちのお食事タイム</h4>
+                            <p class="text-xs text-slate-300 mt-1">普段は見られない、夜間に活発になる魚たちの動きを飼育員が解説。</p>
+                        </div>
+                    </div>
+                    <!-- イベント2 -->
+                    <div class="flex items-start gap-4 pb-4 border-b border-slate-800">
+                        <div class="bg-cyan-950 border border-cyan-500/40 text-cyan-300 font-bold px-3 py-2 rounded-xl text-center min-w-[80px]">
+                            <div class="text-xs">1st Show</div>
+                            <div class="text-lg">19:30</div>
+                        </div>
+                        <div>
+                            <span class="bg-sky-900/80 text-sky-300 text-xs px-2 py-0.5 rounded font-medium">イルカスタジアム</span>
+                            <h4 class="font-bold text-white mt-1">ナイトイルカ＆アシカショー 第1部</h4>
+                            <p class="text-xs text-slate-300 mt-1">照明と音楽に合わせた躍動感あふれるジャンプ！座席は早めの確保がおすすめ。</p>
+                        </div>
+                    </div>
+                    <!-- イベント3 -->
+                    <div class="flex items-start gap-4 pb-4 border-b border-slate-800">
+                        <div class="bg-cyan-950 border border-cyan-500/40 text-cyan-300 font-bold px-3 py-2 rounded-xl text-center min-w-[80px]">
+                            <div class="text-xs">2nd Show</div>
+                            <div class="text-lg">20:30</div>
+                        </div>
+                        <div>
+                            <span class="bg-sky-900/80 text-sky-300 text-xs px-2 py-0.5 rounded font-medium">イルカスタジアム</span>
+                            <h4 class="font-bold text-white mt-1">ナイトイルカ＆アシカショー 第2部（フィナーレ）</h4>
+                            <p class="text-xs text-slate-300 mt-1">夜のハイライトを締めくくる特別バージョン。最後は写真撮影タイムあり！</p>
+                        </div>
+                    </div>
+                    <!-- イベント4 -->
+                    <div class="flex items-start gap-4">
+                        <div class="bg-slate-800 text-slate-400 font-bold px-3 py-2 rounded-xl text-center min-w-[80px]">
+                            <div class="text-xs">閉館</div>
+                            <div class="text-lg">21:00</div>
+                        </div>
+                        <div>
+                            <span class="bg-slate-800 text-slate-300 text-xs px-2 py-0.5 rounded font-medium">館内全域</span>
+                            <h4 class="font-bold text-white mt-1">ナイトアクアリウム 閉館</h4>
+                            <p class="text-xs text-slate-300 mt-1">売店・ショップは20:50まで営業中。限定グッズのチェックをお忘れなく！</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 3: 友達と巡るスタンプラリー＆写真メモ -->
+            <div id="content-rally" class="space-y-4 hidden">
+                <div class="bg-gradient-to-r from-blue-900/60 to-indigo-900/60 border border-cyan-500/30 rounded-2xl p-4">
+                    <h3 class="text-base font-bold text-cyan-300 flex items-center gap-2 mb-1">
+                        <i class="fa-solid fa-award text-yellow-400"></i> 友達とコンプリート！夜のメモリーラリー
+                    </h3>
+                    <p class="text-xs text-slate-300 leading-relaxed">
+                        館内4つの夜限定スポットを巡ってタップ！すべて集めると、オリジナルWeb壁紙画像を取得できます。
+                    </p>
+                </div>
+
+                <!-- スタンプ一覧 -->
+                <div class="grid grid-cols-2 gap-3">
+                    <div id="stamp-card-1" onclick="toggleStamp(1)" class="cursor-pointer bg-slate-900/80 border border-slate-700/80 rounded-2xl p-4 text-center transition hover:border-cyan-400">
+                        <div id="stamp-icon-1" class="w-12 h-12 rounded-full bg-slate-800 text-slate-500 flex items-center justify-center mx-auto text-2xl mb-2">
+                            🦈
+                        </div>
+                        <h4 class="text-xs font-bold text-white mb-1">1. ジンベエザメ水槽</h4>
+                        <span id="stamp-status-1" class="inline-block text-[10px] bg-slate-800 text-slate-400 px-2 py-0.5 rounded-full">未訪</span>
+                    </div>
+
+                    <div id="stamp-card-2" onclick="toggleStamp(2)" class="cursor-pointer bg-slate-900/80 border border-slate-700/80 rounded-2xl p-4 text-center transition hover:border-purple-400">
+                        <div id="stamp-icon-2" class="w-12 h-12 rounded-full bg-slate-800 text-slate-500 flex items-center justify-center mx-auto text-2xl mb-2">
+                            🪼
+                        </div>
+                        <h4 class="text-xs font-bold text-white mb-1">2. クラゲの光回廊</h4>
+                        <span id="stamp-status-2" class="inline-block text-[10px] bg-slate-800 text-slate-400 px-2 py-0.5 rounded-full">未訪</span>
+                    </div>
+
+                    <div id="stamp-card-3" onclick="toggleStamp(3)" class="cursor-pointer bg-slate-900/80 border border-slate-700/80 rounded-2xl p-4 text-center transition hover:border-sky-400">
+                        <div id="stamp-icon-3" class="w-12 h-12 rounded-full bg-slate-800 text-slate-500 flex items-center justify-center mx-auto text-2xl mb-2">
+                            🐬
+                        </div>
+                        <h4 class="text-xs font-bold text-white mb-1">3. ナイトイルカショー</h4>
+                        <span id="stamp-status-3" class="inline-block text-[10px] bg-slate-800 text-slate-400 px-2 py-0.5 rounded-full">未訪</span>
+                    </div>
+
+                    <div id="stamp-card-4" onclick="toggleStamp(4)" class="cursor-pointer bg-slate-900/80 border border-slate-700/80 rounded-2xl p-4 text-center transition hover:border-emerald-400">
+                        <div id="stamp-icon-4" class="w-12 h-12 rounded-full bg-slate-800 text-slate-500 flex items-center justify-center mx-auto text-2xl mb-2">
+                            ☕
+                        </div>
+                        <h4 class="text-xs font-bold text-white mb-1">4. 海辺のナイトテラス</h4>
+                        <span id="stamp-status-4" class="inline-block text-[10px] bg-slate-800 text-slate-400 px-2 py-0.5 rounded-full">未訪</span>
+                    </div>
+                </div>
+
+                <!-- 完了達成時メッセージエリア -->
+                <div id="completion-box" class="hidden bg-gradient-to-r from-emerald-900/80 to-teal-900/80 border border-emerald-400/50 rounded-2xl p-4 text-center">
+                    <span class="text-3xl">🎉</span>
+                    <h4 class="font-bold text-emerald-300 text-base mt-1">全スタンプ獲得！コンプリート達成！</h4>
+                    <p class="text-xs text-emerald-100 mt-1 mb-3">素敵な夜の思い出が保存されました。</p>
+                    <button onclick="openModal()" class="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs px-4 py-2 rounded-full shadow-lg">
+                        🎁 コンプリート特典を受け取る
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 友達同士で楽しむ思い出メモボード -->
+        <section class="bg-slate-900/70 border border-slate-800 rounded-3xl p-5 md:p-6 space-y-4">
+            <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                <i class="fa-solid fa-comments text-cyan-400"></i>
+                友達と一緒に！今夜の思い出ひとこと掲示板
+            </h3>
+            
+            <div class="flex gap-2">
+                <input type="text" id="memo-input" placeholder="例: クラゲのライトアップがすごく綺麗！" class="flex-1 bg-slate-800 border border-slate-700 text-sm text-white rounded-xl px-4 py-2 focus:outline-none focus:border-cyan-400">
+                <button onclick="addMemo()" class="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold text-xs px-5 py-2 rounded-xl transition">
+                    投稿
+                </button>
+            </div>
+
+            <div id="memo-list" class="space-y-2 max-h-48 overflow-y-auto pr-1">
+                <!-- 初期サンプル投稿 -->
+                <div class="bg-slate-800/60 rounded-xl p-3 text-xs border border-slate-700/50 flex justify-between items-center">
+                    <div>
+                        <span class="text-cyan-300 font-bold">みく＆さくら：</span>
+                        <span class="text-slate-200">夜のイルカショー、迫力がすごくて大感動！！🐬✨</span>
+                    </div>
+                    <span class="text-[10px] text-slate-500 ml-2 whitespace-nowrap">たった今</span>
+                </div>
+                <div class="bg-slate-800/60 rounded-xl p-3 text-xs border border-slate-700/50 flex justify-between items-center">
+                    <div>
+                        <span class="text-cyan-300 font-bold">たかゆき：</span>
+                        <span class="text-slate-200">ジンベエザメ水槽の前で写真撮ったら映えまくりでした！📸</span>
+                    </div>
+                    <span class="text-[10px] text-slate-500 ml-2 whitespace-nowrap">5分前</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- アクセス＆基本情報 -->
+        <section class="bg-slate-900/70 border border-slate-800 rounded-3xl p-5 md:p-6">
+            <h3 class="text-lg font-bold text-white flex items-center gap-2 mb-3">
+                <i class="fa-solid fa-circle-info text-cyan-400"></i>
+                のとじま水族館 アクセス・インフォメーション
+            </h3>
+            <div class="text-xs text-slate-300 space-y-2">
+                <p><strong class="text-white">所在地：</strong> 〒926-0211 石川県七尾市能登島曲町15部40</p>
+                <p><strong class="text-white">夜間開館時間：</strong> 18:00 ～ 21:00（最終入館 20:30）</p>
+                <p><strong class="text-white">アクセス：</strong> 和倉温泉駅よりバス・お車で約15〜20分（夜間シャトルバス運行中）</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- 特典モーダル（通知メッセージ用） -->
+    <div id="reward-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-slate-900 border border-cyan-500/50 rounded-3xl p-6 max-w-sm w-full text-center glow-box space-y-4">
+            <div class="text-4xl">🎆</div>
+            <h3 class="text-xl font-bold text-white font-rounded">コンプリートおめでとう！</h3>
+            <p class="text-xs text-slate-300 leading-relaxed">
+                のとじま水族館の夜間限定壁紙画像（デジタルノベルティ）を獲得しました！
+            </p>
+            <div class="py-3 bg-slate-800 rounded-2xl border border-slate-700">
+                <span class="text-xs text-cyan-300 font-mono">CODE: NOTO-NIGHT-2026</span>
+            </div>
+            <button onclick="closeModal()" class="w-full bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold py-2.5 rounded-xl text-sm transition">
+                閉じる
+            </button>
+        </div>
+    </div>
+
+    <!-- フッター -->
+    <footer class="text-center text-xs text-slate-500 py-6 border-t border-slate-800 mt-12">
+        <p>© のとじま水族館 ナイトアクアリウム 観光モデル企画</p>
+    </footer>
+
+    <!-- JavaScript ロジック -->
+    <script>
+        // --- 1. タブ切り替え処理 ---
+        function switchTab(tabName) {
+            // コンテンツの表示/非表示切り替え
+            document.getElementById('content-highlights').classList.add('hidden');
+            document.getElementById('content-schedule').classList.add('hidden');
+            document.getElementById('content-rally').classList.add('hidden');
+
+            document.getElementById('content-' + tabName).classList.remove('hidden');
+
+            // タブスタイルの更新
+            const tabs = ['highlights', 'schedule', 'rally'];
+            tabs.forEach(tab => {
+                const btn = document.getElementById('tab-' + tab);
+                if (tab === tabName) {
+                    btn.classList.add('border-cyan-400', 'text-cyan-300');
+                    btn.classList.remove('border-transparent', 'text-slate-400');
+                } else {
+                    btn.classList.remove('border-cyan-400', 'text-cyan-300');
+                    btn.classList.add('border-transparent', 'text-slate-400');
+                }
+            });
+        }
+
+        // --- 2. いいねボタン処理 ---
+        const likes = { spot1: 48, spot2: 62, spot3: 95, spot4: 39 };
+        function likeSpot(spotId) {
+            likes[spotId]++;
+            const num = spotId.replace('spot', '');
+            document.getElementById('like' + num).innerText = likes[spotId];
+        }
+
+        // --- 3. スタンプラリー処理 ---
+        const stamps = { 1: false, 2: false, 3: false, 4: false };
+
+        function toggleStamp(id) {
+            stamps[id] = !stamps[id];
+            const card = document.getElementById(`stamp-card-${id}`);
+            const icon = document.getElementById(`stamp-icon-${id}`);
+            const status = document.getElementById(`stamp-status-${id}`);
+
+            if (stamps[id]) {
+                card.classList.add('bg-cyan-950/80', 'border-cyan-400');
+                card.classList.remove('bg-slate-900/80', 'border-slate-700/80');
+                icon.classList.add('bg-cyan-500', 'text-white');
+                icon.classList.remove('bg-slate-800', 'text-slate-500');
+                status.innerText = 'GET!';
+                status.classList.add('bg-cyan-500', 'text-slate-950', 'font-bold');
+                status.classList.remove('bg-slate-800', 'text-slate-400');
+            } else {
+                card.classList.remove('bg-cyan-950/80', 'border-cyan-400');
+                card.classList.add('bg-slate-900/80', 'border-slate-700/80');
+                icon.classList.remove('bg-cyan-500', 'text-white');
+                icon.classList.add('bg-slate-800', 'text-slate-500');
+                status.innerText = '未訪';
+                status.classList.remove('bg-cyan-500', 'text-slate-950', 'font-bold');
+                status.classList.add('bg-slate-800', 'text-slate-400');
+            }
+
+            checkCompletion();
+        }
+
+        function checkCompletion() {
+            const allChecked = Object.values(stamps).every(val => val === true);
+            const completionBox = document.getElementById('completion-box');
+            if (allChecked) {
+                completionBox.classList.remove('hidden');
+            } else {
+                completionBox.classList.add('hidden');
+            }
+        }
+
+        // --- 4. モーダル表示制御 ---
+        function openModal() {
+            document.getElementById('reward-modal').classList.remove('hidden');
+        }
+        function closeModal() {
+            document.getElementById('reward-modal').classList.add('hidden');
+        }
+
+        // --- 5. メモ投稿機能 ---
+        function addMemo() {
+            const input = document.getElementById('memo-input');
+            const text = input.value.trim();
+            if (!text) return;
+
+            const memoList = document.getElementById('memo-list');
+            const newMemo = document.createElement('div');
+            newMemo.className = "bg-slate-800/60 rounded-xl p-3 text-xs border border-slate-700/50 flex justify-between items-center animate-pulse";
+            newMemo.innerHTML = `
+                <div>
+                    <span class="text-cyan-300 font-bold">あなた＆友達：</span>
+                    <span class="text-slate-200">${escapeHtml(text)}</span>
+                </div>
+                <span class="text-[10px] text-slate-500 ml-2 whitespace-nowrap">たった今</span>
+            `;
+
+            memoList.prepend(newMemo);
+            input.value = '';
+
+            setTimeout(() => {
+                newMemo.classList.remove('animate-pulse');
+            }, 1000);
+        }
+
+        // 簡易HTMLエスケープ関数
+        function escapeHtml(str) {
+            return str.replace(/[&<>"']/g, function(m) {
+                return {
+                    '&': '&amp;',
+                    '<': '&lt;',
+                    '>': '&gt;',
+                    '"': '&quot;',
+                    "'": '&#039;'
+                }[m];
+            });
+        }
+    </script>
+</body>
+</html>
