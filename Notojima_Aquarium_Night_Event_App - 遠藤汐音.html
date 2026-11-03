@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>のとじま水族館 - Night World Preview</title>
+    <!-- Tailwind CSS (スタイリング用) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #030816;
+            color: #e2e8f0;
+        }
+        /* 夜の海を連想させるグラデーションとアニメーション */
+        .ocean-bg {
+            background: linear-gradient(180deg, #051329 0%, #030816 100%);
+        }
+        .glow-effect {
+            box-shadow: 0 0 25px rgba(56, 189, 248, 0.25);
+        }
+    </style>
+</head>
+<body class="ocean-bg min-h-screen flex flex-col justify-between">
+
+    <!-- 1. ヘッダーエリア -->
+    <header class="w-full py-6 px-4 border-b border-cyan-900/50 bg-slate-950/40 backdrop-blur sticky top-0 z-50">
+        <div class="max-w-4xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <span class="text-3xl">🐋</span>
+                <div>
+                    <h1 class="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                        のとじま水族館
+                    </h1>
+                    <p class="text-xs text-cyan-300">ナイトアクア・ナイトアクアリウム特設サイト</p>
+                </div>
+            </div>
+            <span class="bg-cyan-500/20 text-cyan-300 text-xs px-3 py-1 rounded-full border border-cyan-500/30 font-semibold">
+                夜間限定イベント開催中
+            </span>
+        </div>
+    </header>
+
+    <!-- 2. メインコンテンツ -->
+    <main class="max-w-4xl mx-auto px-4 py-8 space-y-8 flex-grow w-full">
+
+        <!-- ヒーローセクション -->
+        <section class="relative rounded-2xl overflow-hidden bg-gradient-to-b from-blue-900/40 to-slate-900/80 p-6 md:p-10 border border-cyan-800/40 glow-effect text-center">
+            <div class="inline-block mb-3 px-3 py-1 bg-amber-500/20 text-amber-300 border border-amber-500/30 text-xs rounded-full">
+                👥 友達同士で行く！特別な夜体験
+            </div>
+            <h2 class="text-2xl md:text-4xl font-extrabold text-white mb-4 leading-tight">
+                暗闇に浮かぶ海の世界。<br>
+                ふたりで過ごす、幻想的な能登の夜。
+            </h2>
+            <p class="text-cyan-200/80 text-sm md:text-base max-w-xl mx-auto mb-6">
+                普段は見られない夜の水族館。青いライトアップと波の音に包まれながら、一生の思い出に残るナイトウォーキングを楽しみませんか？
+            </p>
+            <div class="flex flex-wrap justify-center gap-3">
+                <a href="#spots" class="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 font-bold px-6 py-3 rounded-xl transition shadow-lg text-sm">
+                    見どころスポットを見る 🌙
+                </a>
+                <a href="#planner" class="bg-slate-800 hover:bg-slate-700 text-cyan-300 font-semibold px-6 py-3 rounded-xl border border-cyan-700/50 transition text-sm">
+                    友達とシミュレーション 💬
+                </a>
+            </div>
+        </section>
+
+        <!-- ハイライトスポット（3箇所の見どころ） -->
+        <section id="spots" class="space-y-4">
+            <h3 class="text-xl font-bold text-cyan-300 flex items-center gap-2">
+                <span>✨</span> 夜間限定のハイライトスポット
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                
+                <!-- カード 1 -->
+                <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-5 hover:border-cyan-500/50 transition duration-300">
+                    <div class="text-4xl mb-3 text-center">🌌</div>
+                    <h4 class="text-lg font-bold text-white mb-2">青の海中トンネル</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        ライトアップされた大水槽をくぐるナイトプロムナード。友達と一緒に写真を撮るのに最適な映えスポットです。
+                    </p>
+                </div>
+
+                <!-- カード 2 -->
+                <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-5 hover:border-cyan-500/50 transition duration-300">
+                    <div class="text-4xl mb-3 text-center">🐬</div>
+                    <h4 class="text-lg font-bold text-white mb-2">ナイトイルカショー</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        静かな夜のプールで繰り広げられる幻想的な演出。音楽と光が演出するアクロバティックな姿は必見です。
+                    </p>
+                </div>
+
+                <!-- カード 3 -->
+                <div class="bg-slate-900/80 border border-slate-800 rounded-xl p-5 hover:border-cyan-500/50 transition duration-300">
+                    <div class="text-4xl mb-3 text-center">🍸</div>
+                    <h4 class="text-lg font-bold text-white mb-2">ナイトオーシャンカフェ</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        限定の光るドリンクや地中海フーズを楽しめる特別カフェスペース。ゆっくり語り合える雰囲気が魅力です。
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 友達と一緒に楽しむインタラクティブ・プランナー -->
+        <section id="planner" class="bg-slate-900/90 border border-cyan-800/50 rounded-2xl p-6 space-y-4">
+            <h3 class="text-xl font-bold text-cyan-300 flex items-center gap-2">
+                <span>🎒</span> 友達と巡るナイトプランナー
+            </h3>
+            <p class="text-xs text-slate-300">
+                一緒に行く人数を選択して、おすすめの限定体験シミュレーションを体験してみましょう。
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 items-center">
+                <label for="group-size" class="text-sm text-cyan-200 shrink-0">参加人数：</label>
+                <select id="group-size" class="bg-slate-800 border border-cyan-700 text-white rounded-lg px-4 py-2 text-sm w-full sm:w-auto">
+                    <option value="2">2人グループ（ペア旅）</option>
+                    <option value="3">3〜4人グループ（仲良しグループ）</option>
+                    <option value="5">5人以上（賑やかツアー）</option>
+                </select>
+                <button onclick="generatePlan()" class="bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold px-5 py-2 rounded-lg text-sm transition w-full sm:w-auto">
+                    プランを作成する
+                </button>
+            </div>
+
+            <!-- プラン結果の出力枠 -->
+            <div id="plan-result" class="hidden mt-4 p-4 bg-slate-950/70 rounded-xl border border-cyan-900/80 text-sm space-y-2">
+                <p id="plan-text" class="text-cyan-200 font-medium"></p>
+                <p id="plan-detail" class="text-xs text-slate-400"></p>
+            </div>
+        </section>
+
+        <!-- 開催情報エリア -->
+        <section class="bg-slate-950/60 border border-slate-800 rounded-xl p-6 text-xs text-slate-400 space-y-2">
+            <h4 class="text-sm font-bold text-white mb-2">📍 のとじま水族館・イベント開催概要</h4>
+            <p>【開催日時】 金・土・祝前日 18:00〜21:00（最終入館 20:30）</p>
+            <p>【会場】 石川県七尾市能登島曲町15部40 TEL: 0767-84-1271</p>
+            <p>【アクセス】 JR和倉温泉駅よりバスで約30分 / 能登島大橋経由で車で約15分</p>
+        </section>
+
+    </main>
+
+    <!-- 3. フッターエリア -->
+    <footer class="w-full py-6 text-center text-xs text-slate-500 border-t border-slate-900">
+        <p>&copy; 2026 のとじま水族館 ナイトイベント企画チーム. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript：シンプルなインタラクション処理 -->
+    <script>
+        // 友達同士のグループ人数に応じたプラン生成ロジック
+        function generatePlan() {
+            const size = document.getElementById('group-size').value;
+            const resultBox = document.getElementById('plan-result');
+            const planText = document.getElementById('plan-text');
+            const planDetail = document.getElementById('plan-detail');
+
+            resultBox.classList.remove('hidden');
+
+            if (size === "2") {
+                planText.textContent = "👥 「じっくり映え写真＆カフェ」ペア満喫コース";
+                planDetail.textContent = "青の海中トンネルで記念撮影後、ナイトオーシャンカフェで限定カクテル風ドリンクを楽しめるゆったりコースです。";
+            } else if (size === "3") {
+                planText.textContent = "🎉 「みんなでわいわい体験」グループ満足コース";
+                planDetail.textContent = "ナイトイルカショーを特等席で観覧したあと、夜の館内スタンプラリーにチャレンジして思い出の限定ステッカーを獲得しましょう！";
+            } else {
+                planText.textContent = "🌟 「貸し切り気分で楽しむ」大人数スペシャルコース";
+                planDetail.textContent = "大型水柱前のフリースペースで写真を撮影。ガイドツアー風に夜の生き物たちの様子を観察しながらゆったり巡るプランです。";
+            }
+        }
+    </script>
+</body>
+</html>
