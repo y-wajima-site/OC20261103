@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>のとじま水族館 - Night Aquarium Special</title>
+    <!-- Tailwind CSS (スタイリング用) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Zen Maru Gothic', sans-serif;
+            background-color: #0c1829;
+            color: #f1f5f9;
+        }
+        /* 夜の水族館をイメージした背景グラデーションとアニメーション */
+        .night-glow {
+            box-shadow: 0 0 25px rgba(56, 189, 248, 0.25);
+        }
+        .neon-text {
+            text-shadow: 0 0 10px rgba(56, 189, 248, 0.7), 0 0 20px rgba(56, 189, 248, 0.4);
+        }
+        /* 幻想的な泡のアニメーション */
+        @keyframes floatUp {
+            0% { transform: translateY(0) scale(0.8); opacity: 0; }
+            50% { opacity: 0.6; }
+            100% { transform: translateY(-100vh) scale(1.2); opacity: 0; }
+        }
+        .bubble {
+            position: absolute;
+            bottom: -20px;
+            background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.1));
+            border-radius: 50%;
+            pointer-events: none;
+            animation: floatUp 8s infinite linear;
+        }
+    </style>
+</head>
+<body class="relative min-h-screen pb-16 overflow-x-hidden">
+
+    <!-- 泡演出の背景レイヤー -->
+    <div id="bubble-container" class="fixed inset-0 pointer-events-none z-0"></div>
+
+    <div class="relative z-10 max-w-4xl mx-auto px-4 py-6">
+
+        <!-- ヘッダーエリア -->
+        <header class="text-center my-6">
+            <span class="inline-block bg-blue-900/60 text-cyan-300 border border-cyan-500/30 text-xs px-3 py-1 rounded-full mb-2 tracking-wider">
+                友達と一緒に楽しむ特別な夜
+            </span>
+            <h1 class="text-3xl sm:text-4xl font-bold text-white neon-text mb-2">
+                のとじまナイトアクアリウム 🌙✨
+            </h1>
+            <p class="text-slate-300 text-sm sm:text-base">
+                神秘的な夜の水族館へようこそ。昼間とは違う特別な思い出を。
+            </p>
+        </header>
+
+        <!-- メインビジュアル (プレースホルダー画像) -->
+        <div class="relative rounded-2xl overflow-hidden mb-8 night-glow border border-slate-700">
+            <img src="https://placehold.co/800x400/0f172a/38bdf8?text=NOTOJIMA+NIGHT+AQUARIUM+%F0%9F%A6%88" 
+                 alt="のとじま水族館 夜間イベント" 
+                 class="w-full h-56 sm:h-72 object-cover"
+                 onerror="this.onerror=null; this.src='https://placehold.co/800x400/1e293b/ffffff?text=Notojima+Aquarium';" />
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent flex items-end p-4 sm:p-6">
+                <div>
+                    <span class="bg-indigo-600 text-white text-xs font-bold px-2.5 py-1 rounded-md">期間限定</span>
+                    <h2 class="text-xl sm:text-2xl font-bold text-white mt-1">ナイト・ファンタジー・ブルー 2026</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- アプリ機能1: 友達と一緒に選ぶ「夜の特別ハイライト」 -->
+        <section class="mb-10">
+            <h3 class="text-xl font-bold text-cyan-300 mb-4 flex items-center gap-2">
+                <span>🐋</span> 夜間限定の見どころ
+            </h3>
+            <div class="grid sm:grid-cols-3 gap-4">
+
+                <!-- ハイライトカード 1 -->
+                <div class="bg-slate-800/80 backdrop-blur border border-slate-700 rounded-xl p-4 flex flex-col justify-between hover:border-cyan-500 transition-all">
+                    <div>
+                        <div class="text-3xl mb-2">🦈✨</div>
+                        <h4 class="font-bold text-white mb-1">ジンベエザメの夜間回遊</h4>
+                        <p class="text-xs text-slate-300 mb-3">大水槽がブルーライトに包まれ、神秘的に泳ぐジンベエザメを鑑賞。</p>
+                    </div>
+                    <button onclick="addMemory('ジンベエザメの夜間回遊')" class="w-full py-2 bg-slate-700 hover:bg-cyan-600 text-cyan-200 hover:text-white rounded-lg text-xs font-bold transition">
+                        ＋ 行きたいリストに追加
+                    </button>
+                </div>
+
+                <!-- ハイライトカード 2 -->
+                <div class="bg-slate-800/80 backdrop-blur border border-slate-700 rounded-xl p-4 flex flex-col justify-between hover:border-cyan-500 transition-all">
+                    <div>
+                        <div class="text-3xl mb-2">🐬🌙</div>
+                        <h4 class="font-bold text-white mb-1">ナイトイルカショー</h4>
+                        <p class="text-xs text-slate-300 mb-3">光と音の演出にあわせて舞うイルカたちの幻想的なライブパフォーマンス！</p>
+                    </div>
+                    <button onclick="addMemory('ナイトイルカショー')" class="w-full py-2 bg-slate-700 hover:bg-cyan-600 text-cyan-200 hover:text-white rounded-lg text-xs font-bold transition">
+                        ＋ 行きたいリストに追加
+                    </button>
+                </div>
+
+                <!-- ハイライトカード 3 -->
+                <div class="bg-slate-800/80 backdrop-blur border border-slate-700 rounded-xl p-4 flex flex-col justify-between hover:border-cyan-500 transition-all">
+                    <div>
+                        <div class="text-3xl mb-2">📸💡</div>
+                        <h4 class="font-bold text-white mb-1">友達とパシャリ！フォトスポット</h4>
+                        <p class="text-xs text-slate-300 mb-3">くらげの光熱帯エリアや、夜限定ネオン看板の前で思い出ショットを撮影。</p>
+                    </div>
+                    <button onclick="addMemory('夜限定フォトスポット')" class="w-full py-2 bg-slate-700 hover:bg-cyan-600 text-cyan-200 hover:text-white rounded-lg text-xs font-bold transition">
+                        ＋ 行きたいリストに追加
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- アプリ機能2: 友達との「思い出チェックリスト & 予定リスト」 -->
+        <section class="bg-slate-800/90 border border-slate-700 rounded-2xl p-6 mb-10 shadow-xl">
+            <h3 class="text-xl font-bold text-cyan-300 mb-2 flex items-center gap-2">
+                <span>📝</span> 友達と回る夜のプランリスト
+            </h3>
+            <p class="text-xs text-slate-400 mb-4">気になるスポットを上のボタンから追加して、一緒に回る順番を決めよう！</p>
+
+            <ul id="memory-list" class="space-y-2 mb-4">
+                <li id="empty-msg" class="text-sm text-slate-500 italic py-2">まだリストに何も追加されていません。</li>
+            </ul>
+
+            <div class="flex gap-2">
+                <button onclick="clearMemory()" class="text-xs text-slate-400 hover:text-slate-200 underline">
+                    リストをクリア
+                </button>
+            </div>
+        </section>
+
+        <!-- アプリ機能3: 夜間限定フォト診断・思い出ガチャ -->
+        <section class="bg-gradient-to-r from-indigo-900/50 to-blue-900/50 border border-indigo-500/30 rounded-2xl p-6 text-center mb-10">
+            <h3 class="text-xl font-bold text-white mb-2">📸 友達と挑戦！夜の水族館「おすすめポーズガチャ」</h3>
+            <p class="text-xs text-slate-300 mb-4">写真撮影でどんなポーズをするか迷ったらガチャを引いてみよう！</p>
+
+            <div id="gacha-result" class="min-h-[60px] flex items-center justify-center text-lg font-bold text-cyan-200 bg-slate-900/60 rounded-xl border border-slate-700 p-4 mb-4">
+                「ガチャを引く」を押すとポーズが表示されます！
+            </div>
+
+            <button onclick="spinGacha()" class="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold rounded-full shadow-lg transition transform active:scale-95">
+                🎰 ポーズガチャを引く！
+            </button>
+        </section>
+
+        <!-- フッター / アクセス情報 -->
+        <footer class="text-center text-slate-400 text-xs border-t border-slate-800 pt-6">
+            <p class="mb-1 font-bold text-slate-300">のとじま水族館 Night Aquarium</p>
+            <p class="mb-4">〒926-0216 石川県七尾市能登島曲町15部40</p>
+            <p class="text-slate-600">※このアプリは観光アイデアに基づくデモ用Webアプリケーションです。</p>
+        </footer>
+
+    </div>
+
+    <!-- JavaScript ロジック -->
+    <script>
+        // ----------------------------------------------------
+        // 1. 泡の浮遊アニメーションの動的生成
+        // ----------------------------------------------------
+        function createBubbles() {
+            const container = document.getElementById('bubble-container');
+            const bubbleCount = 15; // 泡の数
+
+            for (let i = 0; i < bubbleCount; i++) {
+                const bubble = document.createElement('div');
+                bubble.classList.add('bubble');
+                
+                // ランダムなサイズと位置・速度を設定
+                const size = Math.random() * 20 + 8; // 8px ~ 28px
+                const left = Math.random() * 100; // 0% ~ 100%
+                const duration = Math.random() * 6 + 6; // 6s ~ 12s
+                const delay = Math.random() * 5; // 0s ~ 5s
+
+                bubble.style.width = `${size}px`;
+                bubble.style.height = `${size}px`;
+                bubble.style.left = `${left}%`;
+                bubble.style.animationDuration = `${duration}s`;
+                bubble.style.animationDelay = `${delay}s`;
+
+                container.appendChild(bubble);
+            }
+        }
+
+        // ----------------------------------------------------
+        // 2. 行きたいリスト（思い出プラン）機能
+        // ----------------------------------------------------
+        let plannedList = [];
+
+        function addMemory(title) {
+            if (!plannedList.includes(title)) {
+                plannedList.push(title);
+                renderMemoryList();
+            }
+        }
+
+        function removeMemory(title) {
+            plannedList = plannedList.filter(item => item !== title);
+            renderMemoryList();
+        }
+
+        function clearMemory() {
+            plannedList = [];
+            renderMemoryList();
+        }
+
+        function renderMemoryList() {
+            const listEl = document.getElementById('memory-list');
+            listEl.innerHTML = '';
+
+            if (plannedList.length === 0) {
+                listEl.innerHTML = '<li id="empty-msg" class="text-sm text-slate-500 italic py-2">まだリストに何も追加されていません。</li>';
+                return;
+            }
+
+            plannedList.forEach((item, index) => {
+                const li = document.createElement('li');
+                li.className = 'flex items-center justify-between bg-slate-700/60 text-slate-100 text-sm px-4 py-2.5 rounded-lg border border-slate-600';
+                li.innerHTML = `
+                    <span class="flex items-center gap-2">
+                        <span class="bg-cyan-500 text-slate-950 font-bold rounded-full w-5 h-5 flex items-center justify-center text-xs">${index + 1}</span>
+                        ${item}
+                    </span>
+                    <button onclick="removeMemory('${item}')" class="text-xs text-rose-400 hover:text-rose-300 ml-2">削除</button>
+                `;
+                listEl.appendChild(li);
+            });
+        }
+
+        // ----------------------------------------------------
+        // 3. 写真ポーズガチャ機能
+        // ----------------------------------------------------
+        const gachaPoses = [
+            "🦈 ジンベエザメのポーズ（大きく手を広げて！）",
+            "🐬 イルカのジャンプポーズ！",
+            "🦭 アザラシのように顔をひょっこり寄せるポーズ",
+            "✨ 水槽の青い光を背景にしたシルエットポーズ",
+            "🐧 ペンギン歩きポーズ（友達とおそろいで）",
+            "🤍 2人で手でハートを作る「夜水族館」ポーズ"
+        ];
+
+        function spinGacha() {
+            const resultEl = document.getElementById('gacha-result');
+            resultEl.innerHTML = '<span class="animate-pulse text-cyan-400">ポーズを選んでいます...✨</span>';
+
+            setTimeout(() => {
+                const randomIndex = Math.floor(Math.random() * gachaPoses.length);
+                resultEl.innerHTML = gachaPoses[randomIndex];
+            }, 500);
+        }
+
+        // 初期化処理
+        window.onload = function() {
+            createBubbles();
+        };
+    </script>
+</body>
+</html>
